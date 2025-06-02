@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-up-down: upDown 2s ease-in-out infinite alternate-reverse both;
+
+  @keyframes upDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-15px);
+    }
+  }
+}
+
+.header {
+    @apply bg-white text-[#444444] px-4 py-2 transition-all duration-500 z-50
+    flex flex-row  items-center sticky;
+}
+.navmenu {
+    @apply flex items-center justify-between w-full animate-up-down;
+}

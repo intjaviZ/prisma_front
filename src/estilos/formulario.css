@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.box-formulario input[type=text],
+.box-formulario input[type=email],
+.box-formulario textarea,
+.box-formulario select,
+.box-formulario option {
+    @apply text-sm py-2.5 px-4 shadow-none rounded-none text-[#444444] bg-white border border-[rgba(68,68,68,0.4)] max-h-12
+    focus:outline-none focus:ring-0;
+}
