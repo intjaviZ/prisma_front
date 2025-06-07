@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import heroImg from '../assets/img/prisma-hero.webp';
+import heroImg from '../../assets/img/prisma-hero.webp';
 import { BsPlayCircle } from "react-icons/bs";
 
 const Hero = () => {

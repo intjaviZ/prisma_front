@@ -1,7 +1,7 @@
-import Footer from "../componentes/Footer";
-import Header from "../componentes/Header";
-import SectionFormulario from "../componentes/SectionFormulario";
-import SubTitle from "../componentes/SubTitle";
+import Header from "../componentes/general/Header";
+import SubTitle from "../componentes/general/SubTitle";
+import Footer from "../componentes/general/Footer";
+import SectionFormulario from "../componentes/test/SectionFormulario";
 
 const Test = () => {
     return ( 

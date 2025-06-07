@@ -1,7 +1,7 @@
-import Footer from "../componentes/Footer";
-import Header from "../componentes/Header";
-import SectionChatIA from "../componentes/SectionChatIA";
-import SubTitle from "../componentes/SubTitle";
+import Footer from "../componentes/general/Footer";
+import Header from "../componentes/general/Header";
+import SectionChatIA from "../componentes/chat/SectionChatIA";
+import SubTitle from "../componentes/general/SubTitle";
 
 const ChatIA = () => {
     return ( 

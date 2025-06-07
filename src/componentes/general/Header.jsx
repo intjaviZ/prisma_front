@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../estilos/header.css';
+import '../../estilos/header.css';
 import { Link } from 'react-scroll';
 import { Link as LinkRouter } from 'react-router-dom';
 

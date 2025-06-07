@@ -15,7 +15,7 @@ const SectionChatIA = () => {
                     </p>
                 </div>
                 <InputChat />
-                <ResponseChatCard status={"loading"} 
+                <ResponseChatCard status={"success"} 
                 response={"Puedo armarte un componente completo o un sandbox con todo esto funcionando si quieres probarlo de inmediato. ¿Te gustaría también que la tarjeta cambie de color sutilmente según el tipo de respuesta (neutral, positiva, negativa)? También se puede.¿O prefieres algo más visual (como incluir íconos o miniaturas)? Dímelo y lo ajustamos."} />
             </div>
         </section>
