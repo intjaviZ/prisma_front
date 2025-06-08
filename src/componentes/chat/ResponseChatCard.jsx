@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import ErrorCard from "./ErrorCard";
 import LoadingCard from "./LoadingCard";
 import TypingText from "./TypingText";
-import EmptyCard from "./emptyCard";
+import EmptyCard from "./EmptyCard";
 
 const ResponseChatCard = ({ status, response, error }) => {
     return (
