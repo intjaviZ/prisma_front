@@ -17,7 +17,7 @@ const Aplicaciones = () => {
     const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
     return (
-        <section id="aplicaciones" className="bg-[#f9f9f9] py-6 md:py-16 mb-4  h-[calc(100vh-80px)]">
+        <section id="aplicaciones" className="bg-[#f9f9f9] py-6 md:py-16 mb-4  h-full">
             <div className="text-center px-8 py-1 mb-8 relative">
                 <motion.span
                     className="absolute -top-4 text-[#5f687b] opacity-15 left-0 right-0 z-10 font-bold text-5xl

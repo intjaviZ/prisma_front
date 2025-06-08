@@ -17,7 +17,7 @@ const Inicio = () => {
     return (
         <div>
             <Header verNav={true}/>
-            <main className="mt-0 mb-5 min-h-[calc(100vh-80px)]">
+            <main className="mt-0 mb-10 min-h-[calc(100vh-80px)] flex flex-col items-start justify-center gap-10">
                 <motion.div
                     variants={fadeUp}
                     initial="hidden"

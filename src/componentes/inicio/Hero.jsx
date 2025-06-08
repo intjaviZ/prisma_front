@@ -4,7 +4,7 @@ import { BsPlayCircle } from "react-icons/bs";
 
 const Hero = () => {
     return (
-        <section id="hero" className="bg-white w-full px-4 md:px-16 lg:px-20 mt-16 pt-10 md:pt-11 flex flex-col-reverse lg:flex-row justify-end lg:justify-center items-center gap-10 lg:gap-36 h-[calc(100vh-80px)]">
+        <section id="hero" className="bg-white w-full px-4 md:px-16 lg:px-20 mt-16 pt-10 md:pt-11 flex flex-col-reverse lg:flex-row justify-end lg:justify-center items-center gap-10 lg:gap-36 h-full">
             <div className="flex flex-col justify-center w-full lg:w-1/2">
                 <h1 className='text-[#5f687b] w-full font-bold text-pretty md:text-left text-3xl md:text-5xl'>
                     Prevención de Riesgos con Inteligencia Artificial y Soluciones de Manejo Aemocional</h1>
