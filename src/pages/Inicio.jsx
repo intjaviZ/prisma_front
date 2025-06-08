@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import Aplicaciones from "../componentes/inicio/Aplicaiones";
-import Footer from "../componentes/general/Footer";
 import Header from "../componentes/general/Header";
 import Hero from "../componentes/inicio/hero";
 
