@@ -17,7 +17,7 @@ const Aplicaciones = () => {
     const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
     return (
-        <section id="aplicaciones" className="bg-[#f9f9f9] py-16  h-[calc(100vh-80px)]">
+        <section id="aplicaciones" className="bg-[#f9f9f9] py-6 md:py-16 mb-4  h-[calc(100vh-80px)]">
             <div className="text-center px-8 py-1 mb-8 relative">
                 <motion.span
                     className="absolute -top-4 text-[#5f687b] opacity-15 left-0 right-0 z-10 font-bold text-5xl
@@ -33,7 +33,7 @@ const Aplicaciones = () => {
                 <h2 className="relative text-[#5f687b] text-3xl font-bold uppercase mb-5 pb-0 z-20">Aplicaciones</h2>
                 <p className="relative mb-0 z-20 text-[#444444]">Prueba uno de nuestros espacios para relajarte un poco</p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-20 m-5 pt-5">            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-10 md:gap-20 mx-5 mb-0">
                 <CardFase
                     titulo="ChatBot AI"
                     info="En este espacio podrás resolver dudas y recibir apoyo inmediato por medio de un modelo de AI."

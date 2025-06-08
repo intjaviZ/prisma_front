@@ -17,7 +17,7 @@ const Inicio = () => {
     return (
         <div>
             <Header verNav={true}/>
-            <main className="mt-0 min-h-[calc(100vh-80px)]">
+            <main className="mt-0 mb-5 min-h-[calc(100vh-80px)]">
                 <motion.div
                     variants={fadeUp}
                     initial="hidden"
@@ -33,7 +33,6 @@ const Inicio = () => {
                     <Aplicaciones/>
                 </motion.div>
             </main>
-            <Footer/>
         </div>
      );
 }

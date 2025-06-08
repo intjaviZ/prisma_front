@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import InputChat from "./InputChat";
 import ResponseChatCard from "./ResponseChatCard";
 
@@ -18,6 +19,15 @@ const SectionChatIA = () => {
                 <ResponseChatCard status={"success"} 
                 response={"Puedo armarte un componente completo o un sandbox con todo esto funcionando si quieres probarlo de inmediato. ¿Te gustaría también que la tarjeta cambie de color sutilmente según el tipo de respuesta (neutral, positiva, negativa)? También se puede.¿O prefieres algo más visual (como incluir íconos o miniaturas)? Dímelo y lo ajustamos."} />
             </div>
+            <div className="mt-12 w-full flex items-center justify-center">
+                    <Link
+                        to={'/vr'}
+                        className="text-white bg-[#10bc69] font-normal text-base tracking-[1px] inline-block px-6
+                    py-2 rounded-full transition-all duration-500 shadow-sm hover:opacity-85 hover:shadow-md"
+                    >
+                        Siguiente fase
+                    </Link>
+                </div>
         </section>
     );
 }

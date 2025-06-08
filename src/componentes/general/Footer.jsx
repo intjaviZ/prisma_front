@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer id="footer" className="bg-white pt-12 text-xs">
+        <footer id="footer" className="bg-white mt-4 text-xs h-56">
             <div className="flex flex-col px-8 md:px-px-16 lg:px-24">
                 <a href="index.html" className="d-flex align-items-center">
                     <span className="text-2xl font-semibold text-[#5f687b]">PRISMA</span>

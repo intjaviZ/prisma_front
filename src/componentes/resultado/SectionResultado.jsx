@@ -16,8 +16,10 @@ const SectionResultado = ({ resultados }) => {
         3: "text-orange-500",
         4: "text-red-600"
     };
+
+
     return (
-        idEvaluacion && idDimension ? (
+        idEvaluacion != null && idDimension != null ? (
             <motion.section
                 className="p-6 sm:p-10 bg-[#f9fafa] min-h-screen"
                 initial={{ opacity: 0, y: 30 }}
@@ -64,7 +66,7 @@ const SectionResultado = ({ resultados }) => {
                 </div>
                 
             </motion.section>
-        ) : <span>Primero debes completar tu test de evaluación en la Fase 1</span>
+        ) : <span>Primero debes completar tu test de evaluación en la Fase 1.</span>
     )
 }
 

@@ -143,12 +143,12 @@ const Formulario = () => {
     }
 
     return (isDataLoades ?
-        <form id="test_preguntas" className="bg-white shadow-md p-5 sm:p-8" autoComplete="off" onSubmit={finalizarTest}>
+        <form id="test_preguntas" className="bg-white shadow-md p-3 sm:p-8" autoComplete="off" onSubmit={finalizarTest}>
             <div className="box-formulario">
 
                 <div>
-                    <div className='flex justify-between gap-10'> {/*Estado y ciudad */}
-                        <div className="w-1/2 py-4 flex flex-col">
+                    <div className='flex flex-col md:flex-row md:justify-between md:gap-10'> {/*Estado y ciudad */}
+                        <div className="w-full py-4 flex flex-col">
                             <label className='pb-2' htmlFor="estados">Estado</label>
                             <select required name="estados" onChange={(e) => onChangeUbicacionForm(e, "estado")}>
                                 <option value={0}>Selecciona una Opción</option>
@@ -157,7 +157,7 @@ const Formulario = () => {
                                 ))}
                             </select>
                         </div>
-                        <div className="w-1/2 py-4 flex flex-col">
+                        <div className="w-full py-4 flex flex-col">
                             <label className="pb-2" htmlFor='ciudades'>Ciudad</label>
                             <select required name="ciudades" onChange={(e) => onChangeUbicacionForm(e, "ciudad")}>
                                 <option value={0}>Selecciona un estado antes</option>
@@ -167,17 +167,17 @@ const Formulario = () => {
                             </select>
                         </div>
                     </div>
-                    <div className='flex justify-between gap-10'> {/*Escuela y Grupo */}
-                        <div className="w-1/2 py-4 flex flex-col">
+                    <div className='flex flex-col md:flex-row md:justify-between md:gap-10'> {/*Escuela y Grupo */}
+                        <div className="w-full py-4 flex flex-col">
                             <label className="pb-2" htmlFor='escuelas'>Escuela</label>
                             <select required name="escuelas" onChange={(e) => onChangeUbicacionForm(e, "escuela")}>
                                 <option value={0}>Selecciona una ciudad antes</option>
-                                {escuelas.map((escuela) => (
+                                {escuelas ? escuelas.map((escuela) => (
                                     <option key={escuela.id} value={escuela.id}>{escuela.escuela}</option>
-                                ))}
+                                )) : <></>}
                             </select>
                         </div>
-                        <div className="w-1/2 py-4 flex flex-col">
+                        <div className="w-full py-4 flex flex-col">
                             <label className="pb-2" htmlFor='grados'>Grado y grupo</label>
                             <select required name="grados" onChange={(e) => onChangeUbicacionForm(e, "grupo")}>
                                 <option value={0}>Selecciona una escuela antes</option>
@@ -187,12 +187,12 @@ const Formulario = () => {
                             </select>
                         </div>
                     </div>
-                    <div className='flex justify-between gap-10'> {/*Nombre y numero de control */}
-                        <div className="w-1/2 py-4 flex flex-col">
+                    <div className='flex flex-col md:flex-row md:justify-between md:gap-10'> {/*Nombre y numero de control */}
+                        <div className="w-full py-4 flex flex-col">
                             <label className="pb-2">Nombre completo</label>
                             <input type="text" className="form-control" required minLength="3" maxLength="60" onChange={(e) => onChangeUbicacionForm(e, "nombre")}></input>
                         </div>
-                        <div className="w-1/2 py-4 flex flex-col">
+                        <div className="w-full py-4 flex flex-col">
                             <label className="pb-2">Número de control</label>
                             <input type="text" className="form-control" required minLength="14" maxLength="20" onChange={(e) => onChangeUbicacionForm(e, "numero_control")}></input>
                         </div>

@@ -1,4 +1,4 @@
-const APIROOT = "http://127.0.0.1:8000"
+const APIROOT = "https://independently-undefined-letting-ml.trycloudflare.com"
 
 export const preguntasFrecuentes = async (clasificacionPreg) => {
     try {

@@ -6,7 +6,7 @@ const Semaforo = ({riesgo}) => {
                  "bg-gray-500";
     return (
         <>
-            <div className={`inline-block w-4 h-4 rounded-full mr-2 ${color}`}></div>
+            <div className={`inline-block min-w-3 min-h-3 w-4 h-4 rounded-full mr-2 ${color}`}></div>
         </>
     );
 }

@@ -1,38 +1,44 @@
-const APIROOT = "http://127.0.0.1:8000"
+const APIROOT = "https://independently-undefined-letting-ml.trycloudflare.com"
 
 export const pedirEstados = async () => {
     const response = await fetch(`${APIROOT}/localizacion/estados`);
     const estados = await response.json();
+    if (response.status == 404) { return []; }
     return estados;
 };
 
 export const pedirMunicipios = async (idEstado) => {
     const response = await fetch(`${APIROOT}/localizacion/municipios/${idEstado}`);
     const municipios = await response.json();
+    if (response.status == 404) { return []; }
     return municipios;
 };
 
 export const pedirEscuelas = async (idCiudad) => {
     const response = await fetch(`${APIROOT}/localizacion/escuelas/${idCiudad}`);
-    const ciudades = await response.json();
-    return ciudades;
+    const escuelas = await response.json();
+    if (response.status == 404) { return []; }
+    return escuelas || [{}];
 };
 
 export const pedirGrupos = async (idEscuela) => {
     const response = await fetch(`${APIROOT}/localizacion/grupos/${idEscuela}`);
-    const ciudades = await response.json();
-    return ciudades;
+    const grupos = await response.json();
+    if (response.status == 404) { return []; }
+    return grupos;
 };
 
 export const pedirPreguntas = async () => {
     const response = await fetch(`${APIROOT}/test/preguntas/`);
-    const ciudades = await response.json();
-    return ciudades;
+    const preguntas = await response.json();
+    if (response.status == 404) { return []; }
+    return preguntas;
 };
 export const pedirOpciones = async () => {
     const response = await fetch(`${APIROOT}/test/opciones/`);
-    const ciudades = await response.json();
-    return ciudades;
+    const opciones = await response.json();
+    if (response.status == 404) { return []; }
+    return opciones;
 };
 
 export const terminarTest = async (dataTest) => {
