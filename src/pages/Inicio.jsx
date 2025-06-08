@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import Aplicaciones from "../componentes/inicio/Aplicaiones";
 import Header from "../componentes/general/Header";
-import Hero from "../componentes/inicio/hero";
+import Hero from "../componentes/inicio/Hero";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

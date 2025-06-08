@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import Footer from "../componentes/general/Footer";
 import Header from "../componentes/general/Header";
 import SubTitle from "../componentes/general/SubTitle";
 import SectionPreguntasFrec from "../componentes/preguntasFrec/SectionPreguntasFrec";

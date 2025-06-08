@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import Cargando from './componentes/general/Cargando'
 import { FiltroProvider } from './orientador/contextos/FiltroContext'
-import Inicio from './pages/inicio'
+import Inicio from './pages/Inicio'
 
 const NoEncontrado = lazy(() => import('./componentes/general/NoEncontrado'))
 const Test = lazy(() => import('./pages/Test'))
