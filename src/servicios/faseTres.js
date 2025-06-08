@@ -1,4 +1,4 @@
-const APIROOT = "https://independently-undefined-letting-ml.trycloudflare.com"
+import { APIROOT } from "./ROOT";
 
 export const EntornosVr = async (clasificacionEntorno) => {
     try {

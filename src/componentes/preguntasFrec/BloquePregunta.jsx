@@ -9,7 +9,7 @@ const BloquesColapsables = ({ preguntas }) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return (
+  return ( preguntas != null &&
     <div className="space-y-6">
       {preguntas.map((item, index) => {
         const isOpen = openIndex === index;

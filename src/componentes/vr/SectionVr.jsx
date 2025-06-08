@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import CardVr from "./CardVr";
 import { EntornosVr } from "../../servicios/faseTres";
+import { useLocation } from "react-router-dom";
 
 const SectionVr = () => {
+    const location = useLocation();
+    const { idEscuela, idDimension } = location.state || {};
     const [vrData, setVrData] = useState([]);
     useEffect(() => {
         const fetchPreguntasFrec = async () => {
             const response = await EntornosVr({
-                "idDimension": 1,
-                "idEscuela": 1,
+                "idDimension": idDimension || null,
+                "idEscuela": idEscuela || 1,
             });
             setVrData(response);
         }

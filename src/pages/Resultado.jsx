@@ -3,16 +3,11 @@ import Footer from "../componentes/general/Footer";
 import Header from "../componentes/general/Header";
 import SubTitle from "../componentes/general/SubTitle";
 import SectionResultado from "../componentes/resultado/SectionResultado";
-import { useEffect } from "react";
 
 const Resultado = () => {
     const location = useLocation();
     const { resultados = {} }  = location.state || {};
 
-    useEffect(() => {
-        console.log(resultados);
-        
-    },[]);
     return ( 
         <div>
             <Header verNav={true}/>

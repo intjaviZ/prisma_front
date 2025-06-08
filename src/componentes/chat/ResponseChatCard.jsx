@@ -22,10 +22,7 @@ const ResponseChatCard = ({ status, response, error }) => {
                     animate={{ opacity: 1, y: 0 }}
                     className="bg-white rounded-xl p-6 shadow-md border border-gray-200"
                 >
-                    <TypingText text="Lamento mucho tu pérdida. Es normal sentirte triste, tu perrito fue parte de tu vida y tu familia.
-                     Permítete llorar, recordar los buenos momentos y hablar con alguien que te escuche.
-                      Puedes guardar una foto o algo especial que te lo recuerde con cariño. Con el tiempo, 
-                      el dolor se vuelve más llevadero."/>
+                    <TypingText text={response.respuesta}/>
                 </motion.div>
             )}
         </div>

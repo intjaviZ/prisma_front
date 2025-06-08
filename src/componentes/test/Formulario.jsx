@@ -173,7 +173,7 @@ const Formulario = () => {
                             <select required name="escuelas" onChange={(e) => onChangeUbicacionForm(e, "escuela")}>
                                 <option value={0}>Selecciona una ciudad antes</option>
                                 {escuelas ? escuelas.map((escuela) => (
-                                    <option key={escuela.id} value={escuela.id}>{escuela.escuela}</option>
+                                    <option key={escuela.id} value={escuela.id}>{"escuela "+escuela.id}</option>
                                 )) : <></>}
                             </select>
                         </div>

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion"
 import Semaforo from "./Semaforo";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const SectionResultado = ({ resultados }) => {
-    const { idEvaluacion, idDimension, idRiesgo, evaluacionGeneral, evaluacionDimension, dimension, riesgo } = resultados;
+    const { idEscuela, idEvaluacion, idDimension, idRiesgo, evaluacionGeneral, evaluacionDimension, dimension, riesgo } = resultados;
     const mensajes = {
         1: `Nos alegra saber que tienes un ${evaluacionGeneral}`,
         2: `Lo estás haciendo bien, tienes un ${evaluacionGeneral}`,
@@ -17,6 +18,10 @@ const SectionResultado = ({ resultados }) => {
         4: "text-red-600"
     };
 
+    useEffect(() => {
+        console.log(idDimension);
+        
+    },[]);
 
     return (
         idEvaluacion != null && idDimension != null ? (
@@ -59,7 +64,8 @@ const SectionResultado = ({ resultados }) => {
                     </div>
                     <div className="flex items-center justify-center">
                         <p className="text-gray-700"></p>
-                        <Link to={'/chat'} className="text-white bg-[#10bc69] font-normal text-base tracking-[1px] 
+                        <Link to={'/preguntasFrec'} state={{"idEscuela": idEscuela, "idDimension": idDimension}}
+                        className="text-white bg-[#10bc69] font-normal text-base tracking-[1px] 
                         inline-block px-6 py-2 rounded-full transition-all duration-500 shadow-sm hover:opacity-85 hover:shadow-md"
                         >Siguiente fase</Link>
                     </div>
