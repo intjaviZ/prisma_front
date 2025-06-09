@@ -50,24 +50,11 @@ const Formulario = () => {
         }
         loadData();
     }, []);
-    useEffect(() => {
-        console.log("Escuela: ",escuela);
-    }, [escuela]);
-    useEffect(() => {
-        console.log("Alumno: ",alumno);
-    }, [alumno]);
-    useEffect(() => {
-        console.log("Respuestas: ",respuestas);
-    }, [respuestas]);
-    useEffect(() => {
-        console.log("Comentario: ",comentario);
-    }, [comentario]);
     
     const onChangeUbicacionForm = (event, prop) => {
         let value = event.target.value;
         let esAlumno = false;
         let esComentario = false;
-        console.log(value);
  
         switch (prop) {
             case "nombre":

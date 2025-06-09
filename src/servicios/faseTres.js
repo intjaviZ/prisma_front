@@ -8,7 +8,6 @@ export const EntornosVr = async (clasificacionEntorno) => {
             body: JSON.stringify(clasificacionEntorno)
         });
         const resultados = await response.json();
-        console.log(resultados);
         
         return resultados;
     } catch (error) {

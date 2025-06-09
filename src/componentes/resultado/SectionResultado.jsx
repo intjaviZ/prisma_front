@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
 import Semaforo from "./Semaforo";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const SectionResultado = ({ resultados }) => {
     const { idEscuela, idEvaluacion, idDimension, idRiesgo, evaluacionGeneral, evaluacionDimension, dimension, riesgo } = resultados;
@@ -17,11 +16,6 @@ const SectionResultado = ({ resultados }) => {
         3: "text-orange-500",
         4: "text-red-600"
     };
-
-    useEffect(() => {
-        console.log(idDimension);
-        
-    },[]);
 
     return (
         idEvaluacion != null && idDimension != null ? (
