@@ -3,6 +3,7 @@
 .box-formulario input[type=text],
 .box-formulario input[type=email],
 .box-formulario input[type=url],
+.box-formulario input[type=password],
 .box-formulario textarea,
 .box-formulario select,
 .box-formulario option {

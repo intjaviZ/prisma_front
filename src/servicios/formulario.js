@@ -1,28 +1,28 @@
 import { APIROOT } from "./ROOT";
 
 export const pedirEstados = async () => {
-    const response = await fetch(`${APIROOT}/localizacion/estados`);
+    const response = await fetch(`${APIROOT}/localizacion/estados/`);
     const estados = await response.json();
     if (response.status == 404) { return []; }
     return estados;
 };
 
 export const pedirMunicipios = async (idEstado) => {
-    const response = await fetch(`${APIROOT}/localizacion/municipios/${idEstado}`);
+    const response = await fetch(`${APIROOT}/localizacion/municipios/${idEstado}/`);
     const municipios = await response.json();
     if (response.status == 404) { return []; }
     return municipios;
 };
 
 export const pedirEscuelas = async (idCiudad) => {
-    const response = await fetch(`${APIROOT}/localizacion/escuelas/${idCiudad}`);
+    const response = await fetch(`${APIROOT}/localizacion/escuelas/${idCiudad}/`);
     const escuelas = await response.json();
     if (response.status == 404) { return []; }
     return escuelas || [{}];
 };
 
 export const pedirGrupos = async (idEscuela) => {
-    const response = await fetch(`${APIROOT}/localizacion/grupos/${idEscuela}`);
+    const response = await fetch(`${APIROOT}/localizacion/grupos/${idEscuela}/`);
     const grupos = await response.json();
     if (response.status == 404) { return []; }
     return grupos;

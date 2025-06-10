@@ -4,7 +4,10 @@ import { lazy, Suspense } from 'react'
 import Cargando from './componentes/general/Cargando'
 import { FiltroProvider } from './orientador/contextos/FiltroContext'
 import Inicio from './pages/Inicio'
+import { OrientadorProvider } from './orientador/contextos/OrientadorContext'
+import MainOrientador from './orientador/pages/MainOrientador'
 
+const Login = lazy(() => import('./orientador/pages/Login'))
 const NoEncontrado = lazy(() => import('./componentes/general/NoEncontrado'))
 const Test = lazy(() => import('./pages/Test'))
 const ChatIA = lazy(() => import('./pages/ChatIA'))
@@ -33,7 +36,8 @@ function App() {
         <Route path='/resultado' element={<Resultado />}></Route>
         <Route path='/preguntasFrec' element={<PreguntasFrec />}></Route>
         <Route path='/vr' element={<Vr />}></Route>
-        <Route path='orientador/' element={<FiltroProvider> <LayoutOrientador /> </FiltroProvider>}>
+        <Route path='/orientador' element={<OrientadorProvider> <Login /> </OrientadorProvider>} />
+        <Route path='panel/' element={<OrientadorProvider> <MainOrientador/> </OrientadorProvider>}>
           <Route index element={<InicioOrientador />} />
           <Route path='inicio' element={<InicioOrientador />} />
           <Route path='comentarios' element={<Comentarios />} />
