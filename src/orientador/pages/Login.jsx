@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const Login = () => {
     const [escuelas, setEscuelas] = useState([]);
-    const { orientador, actualizarOrientador } = useOrientador();
+    const { orientador, actualizarOrientador, acceder } = useOrientador();
 
     const navegar = useNavigate();
 
@@ -19,6 +19,7 @@ const Login = () => {
         loadData();
     },[]);
 
+
     const login = async (event) => {
         event.preventDefault();
         const response = await loginOrientador({
@@ -27,7 +28,13 @@ const Login = () => {
             "password": orientador.password
         });
         if (response.status == 200) {
-            navegar('/noteList');
+            acceder();
+            setTimeout(() => {
+                navegar('/panel');
+            }, 400);
+            
+        } else {
+            alert("Un campo es incorrecto");
         }
     }
 

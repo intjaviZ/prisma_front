@@ -18,8 +18,12 @@ export const OrientadorProvider = ({ children }) => {
         setOrientador({ permissions: false, nombre: '', escuelaId: '', password:'' });
     };
 
+    const acceder = () => {
+        setOrientador(prev => ({ ...prev, ['permissions']: true }));
+    };
+
     return (
-        <ContextOrientador.Provider value={{orientador, actualizarOrientador, limpiarOrientador}}>
+        <ContextOrientador.Provider value={{orientador, actualizarOrientador, limpiarOrientador, acceder}}>
             {children}
         </ContextOrientador.Provider>
      );
