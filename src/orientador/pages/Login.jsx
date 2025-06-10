@@ -60,7 +60,7 @@ const Login = () => {
                             name="password"
                             type="password"
                             value={orientador.password}
-                            onChange={(e) => actualizarOrientador(e, "password")}
+                            onChange={(e) => actualizarOrientador(e.target.value, "password")}
                         />
                     </div>
                     <button type="submit"

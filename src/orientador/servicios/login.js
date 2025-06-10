@@ -2,6 +2,8 @@ import { APIROOT } from "../../servicios/ROOT";
 
 export const loginOrientador = async (data) => {
     try {
+        console.log(data);
+        
         const response = await fetch(`${APIROOT}login/`, {
             method: 'POST',
             headers: {
