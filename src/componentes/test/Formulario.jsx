@@ -37,15 +37,17 @@ const Formulario = () => {
 
     useEffect(() => {
         const loadData = async () => {
-            const [estados, preguntas, opciones] = await Promise.all([
+            const [estados, preguntas, opciones, escuelas] = await Promise.all([
                 pedirEstados(),
                 pedirPreguntas(),
-                pedirOpciones()
+                pedirOpciones(),
+                pedirEscuelas()
             ]);
 
             setEstados(estados);
             setPreguntas(preguntas);
             setOpciones(opciones);
+            setEscuelas(escuelas);
             setIsDataLoaded(true);
         }
         loadData();
@@ -79,10 +81,10 @@ const Formulario = () => {
                 value = parseInt(value);
                 if (value !== 0) pedirMunicipios(value).then((data) => setCiudades(data));
                 break;
-            case "ciudad":
-                value = parseInt(value);
-                if (value !== 0) pedirEscuelas(value).then((data) => setEscuelas(data))
-                break;
+            // case "ciudad":
+            //     value = parseInt(value);
+            //     if (value !== 0) pedirEscuelas().then((data) => setEscuelas(data))
+            //     break;
             case "escuela":
                 value = parseInt(value);
                 if (value !== 0) pedirGrupos(value).then((data) => setGrupos(data))

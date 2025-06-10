@@ -14,8 +14,8 @@ export const pedirMunicipios = async (idEstado) => {
     return municipios;
 };
 
-export const pedirEscuelas = async (idCiudad) => {
-    const response = await fetch(`${APIROOT}/localizacion/escuelas/${idCiudad}/`);
+export const pedirEscuelas = async () => {
+    const response = await fetch(`${APIROOT}/localizacion/escuelas/`);
     const escuelas = await response.json();
     if (response.status == 404) { return []; }
     return escuelas || [{}];
