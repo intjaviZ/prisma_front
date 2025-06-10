@@ -4,7 +4,7 @@ export const loginOrientador = async (data) => {
     try {
         console.log(data);
         
-        const response = await fetch(`${APIROOT}login/`, {
+        const response = await fetch(`${APIROOT}/orientador/login/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
