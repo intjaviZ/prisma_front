@@ -1,14 +1,10 @@
-import { FiltroProvider } from "../contextos/FiltroContext";
-import LayoutOrientador from "./LayoutOrientador";
+import { useOrientador } from "../contextos/OrientadorContext";
 import VistasProtegidas from "./VistaProteegida";
 
 const MainOrientador = () => {
+    const { orientador } = useOrientador();
     return (
-        <FiltroProvider>
-            <VistasProtegidas>
-                <LayoutOrientador />
-            </VistasProtegidas>
-        </FiltroProvider>
+        <VistasProtegidas permissions={orientador.permissions} />
     );
 }
 

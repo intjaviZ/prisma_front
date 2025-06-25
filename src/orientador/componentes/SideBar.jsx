@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, MessageSquare, CirclePlus,  BarChart, Clock, BookOpen, PieChart } from "lucide-react";
+import { Home, MessageSquare, CirclePlus, PieChart } from "lucide-react";
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -11,10 +11,10 @@ const Sidebar = () => {
         seguimientos: false,
     });
     const navItems = [
-        { to: "/orientador/inicio", label: "Inicio", icon: Home, nombre: "inicio" },
-        { to: "/orientador/comentarios", label: "Comentarios", icon: MessageSquare, nombre: "comentarios" },
-        { to: "/orientador/nuevoRecurso", label: "Nuevo recurso", icon: CirclePlus, nombre: "nuevo" },
-        { to: "/orientador/seguimientos", label: "Seguimientos", icon: PieChart, nombre: "seguimientos" },
+        { to: "/panel/inicio", label: "Inicio", icon: Home, nombre: "inicio" },
+        { to: "/panel/comentarios", label: "Comentarios", icon: MessageSquare, nombre: "comentarios" },
+        { to: "/panel/nuevoRecurso", label: "Nuevo recurso", icon: CirclePlus, nombre: "nuevo" },
+        { to: "/panel/seguimientos", label: "Seguimientos", icon: PieChart, nombre: "seguimientos" },
     ];
 
     const handleActive = (item) => {
@@ -41,7 +41,7 @@ const Sidebar = () => {
                     <Home className="w-5 h-5" />
                     {navItems[0].label}
                 </Link>
-                <Link
+                {/* <Link
                     key={navItems[3].to}
                     to={navItems[3].to}
                     className={`${active.seguimientos === true ? styleClass : 'text-gray-700'} flex items-center gap-3 px-3 py-2 rounded-lg font-medium  hover:bg-gray-100 transition`}
@@ -49,7 +49,7 @@ const Sidebar = () => {
                 >
                     <PieChart className="w-5 h-5" />
                     {navItems[3].label}
-                </Link>
+                </Link> */}
                 <Link
                     key={navItems[1].to}
                     to={navItems[1].to}

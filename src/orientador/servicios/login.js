@@ -12,7 +12,15 @@ export const loginOrientador = async (data) => {
             credentials: 'include',
             body: JSON.stringify(data)
         });
-        return response;
+        const orientador = response.json();
+        console.log(data);
+        console.log("status",response.status);
+        
+        
+        return {
+            "data": orientador,
+            "status": response.status
+        }
     } catch (error) {
         alert('Error al iniciar sesion:', error);
         throw error;

@@ -4,6 +4,7 @@ import '../../estilos/formulario.css';
 import { loginOrientador, pedirEscuelas } from "../servicios/login";
 import Header from "../../componentes/general/Header";
 import { useEffect, useState } from "react";
+import { ModalError, ModalExito } from "../../componentes/modal/Modal";
 
 const Login = () => {
     const [escuelas, setEscuelas] = useState([]);
@@ -29,17 +30,19 @@ const Login = () => {
         });
         if (response.status == 200) {
             acceder();
-            setTimeout(() => {
-                navegar('/panel');
-            }, 400);
-            
-        } else {
-            alert("Un campo es incorrecto");
+            ModalExito("Listo","",() =>  navegar('/panel'));
+        }
+        // if (orientador.nombre === "prisma" && orientador.escuelaId === "1" && orientador.password === "prismaOrientador") {
+        //     acceder();
+        //     ModalExito("Listo","",() =>  navegar('/panel'));
+        // } 
+        else {
+            ModalError("Upps","Algo salió mal");
         }
     }
 
     return (
-        <div className="flex flex-col items-center justify-start">
+        <div className="flex flex-col items-center justify-start" id="main">
             <Header/>
             <form onSubmit={login} className="bg-white shadow-md sm:p-8 mt-40 mx-40 w-[600px] flex items-center justify-center">
                 <div className="box-formulario w-full ">
@@ -57,7 +60,7 @@ const Login = () => {
                             <select required name="escuelas" onChange={(e) => actualizarOrientador(e.target.value, "escuelaId")}>
                                 <option value={0}>Selecciona una ciudad antes</option>
                                 {escuelas ? escuelas.map((escuela) => (
-                                    <option key={escuela.id} value={escuela.id}>{"escuela "+escuela.id}</option>
+                                    <option key={escuela.id} value={escuela.id}>{escuela.escuela}</option>
                                 )) : <></>}
                             </select>
                         </div>

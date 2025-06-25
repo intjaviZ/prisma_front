@@ -36,16 +36,25 @@ function App() {
         <Route path='/resultado' element={<Resultado />}></Route>
         <Route path='/preguntasFrec' element={<PreguntasFrec />}></Route>
         <Route path='/vr' element={<Vr />}></Route>
-        <Route path='/orientador' element={<OrientadorProvider> <Login /> </OrientadorProvider>} />
-        <Route path='panel/' element={<OrientadorProvider> <MainOrientador/> </OrientadorProvider>}>
-          <Route index element={<InicioOrientador />} />
-          <Route path='inicio' element={<InicioOrientador />} />
-          <Route path='comentarios' element={<Comentarios />} />
-          <Route path='seguimientos' element={<Seguimientos />} />
-          <Route path='nuevoRecurso/' element={<NuevoRecurso />} >
-            <Route index element={<NuevoRecursoInicio />} />
-            <Route path='entornoVr' element={<NuevoEntorno />} />
-            <Route path='preguntaComun' element={<NuevaPreguntaFrec />} />
+        <Route element={<OrientadorProvider/>}>
+          <Route path='/orientador' element={<Login />} />
+          <Route path='panel/'
+            element={    
+              <FiltroProvider>
+                <MainOrientador />
+              </FiltroProvider>
+            }>
+            <Route element={<LayoutOrientador />}>
+              <Route index element={<InicioOrientador />} />
+              <Route path='inicio' element={<InicioOrientador />} />
+              <Route path='comentarios' element={<Comentarios />} />
+              <Route path='seguimientos' element={<Seguimientos />} />
+              <Route path='nuevoRecurso/' element={<NuevoRecurso />} >
+                <Route index element={<NuevoRecursoInicio />} />
+                <Route path='entornoVr' element={<NuevoEntorno />} />
+                <Route path='preguntaComun' element={<NuevaPreguntaFrec />} />
+              </Route>
+            </Route>
           </Route>
         </Route>
         <Route path='*' element={<NoEncontrado />}></Route>

@@ -1,8 +1,9 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
 
 const ContextOrientador = createContext();
 
-export const OrientadorProvider = ({ children }) => {
+export const OrientadorProvider = () => {
     let [orientador, setOrientador] = useState({
         "permissions": false,
         "nombre": "",
@@ -22,9 +23,14 @@ export const OrientadorProvider = ({ children }) => {
         setOrientador(prev => ({ ...prev, ['permissions']: true }));
     };
 
+    useEffect(() => {
+        console.log(orientador);
+        
+    },[orientador]);
+
     return (
         <ContextOrientador.Provider value={{orientador, actualizarOrientador, limpiarOrientador, acceder}}>
-            {children}
+            <Outlet/>
         </ContextOrientador.Provider>
      );
 }
